@@ -17,7 +17,7 @@ Back End usado para o site e o bot da discipuluz!
     * Windows - [Link](https://golang.org/)
     * Ubuntu - `sudo apt-get install go`
     * Fedora - `sudo yum install go`
-    * Arch - `sudo pacman -S gos`
+    * Arch - `sudo pacman -S go`
      
 ---
 
