@@ -1,4 +1,4 @@
-# DISCIPULUZ BACK
+# BIXOS APP BACK
 Back End usado para o site e o bot da discipuluz!
 
 ## LINGUAGEM
@@ -16,8 +16,8 @@ Back End usado para o site e o bot da discipuluz!
  1. Install Go
     * Windows - [Link](https://golang.org/)
     * Ubuntu - `sudo apt-get install go`
-    * Fedora - `sudo yum install go`
     * Arch - `sudo pacman -S go`
+    * Fedora - `sudo yum install go`
      
 ---
 
