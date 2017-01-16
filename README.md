@@ -8,7 +8,7 @@ Back End usado para o site e o bot da discipuluz!
 * [http](https://golang.org/pkg/net/http/)
 
 ## BANCO DE DADOS
-[TBD](https://www.google.com/) - [Go-lib](https://www.ggogle.com/)
+[MySQL](https://www.mysql.com/) - [Go-driver](https://github.com/go-sql-driver/mysql) - [Go-lib](https://golang.org/pkg/database/sql/)
 
 ---
 
