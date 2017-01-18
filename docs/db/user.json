@@ -1,0 +1,87 @@
+{
+  "name": "string",
+  "account": {
+    "email": "string",
+    "password": "string"
+  },
+  "birth": "Date",
+  "phone": "string",
+  "grad": "string",
+  "drinks": "int",
+  "relationship": {
+    "sex": "string",
+    "gender": "string",
+    "status": "string"
+  },
+  "social?": {
+    "facebook?": "string",
+    "twitter?": "string",
+    "instagram?": "string",
+    "snapchat?": "string",
+    "google": "string",
+    "others": ["string"]
+  },
+  "reason?": {
+    "unicamp?": "string",
+    "grad?": "string"
+  }, 
+  "origin": {
+    "country": "string",
+    "state": "string",
+    "city": "string",
+    "school?": "string"
+  },
+  "hobbies": {
+    "games?": {
+      "favorites?": ["string"],
+      "consoles?": ["string"],
+      "pc": "bool",
+      "accounts": {
+        "steam?": "string",
+        "origin?": "string",
+        "psn?": "string",
+        "live?": "string",
+        "battlenet?": "string",
+        "uplay?": "string",
+        "others?": ["string"]
+      },
+      "extra": "string"
+    },
+    "sports?": {
+      "plays?": ["string"],
+      "likes?": ["string"],
+      "extra?": "string"
+    },
+    "tv?": {
+      "genres?": ["string"],
+      "movies?": ["string"],
+      "series?": ["string"],
+      "cartoons?": ["string"],
+      "animes?": ["string"],
+      "accounts": {
+        "imdb?": "string",
+        "tvshowtime?": "string",
+        "anidb?": "string",
+        "myanimelist?": "string",
+        "anilist?": "string",
+        "others?": ["string"]
+      }
+    },
+    "programming?": {
+      "languages?": ["string"],
+      "os?": ["string"]
+    },
+    "music": {
+      "genres": ["string"],
+      "bands": ["string"],
+      "albuns": ["string"],
+      "songs": ["string"]
+    },
+    "others?": ["string"]
+  },
+  "work?": {
+    "job?": "string",
+    "enterprise?": "string"
+  },
+  "languages": ["string"]
+}
