@@ -1,8 +1,10 @@
 {
   "name": "string",
+  "ra": "string",
   "account": {
     "email": "string",
-    "password": "string"
+    "password": "string",
+    "UID": "string"
   },
   "birth": "Date",
   "phone": "string",
@@ -83,5 +85,9 @@
     "job?": "string",
     "enterprise?": "string"
   },
-  "languages": ["string"]
+  "languages": ["string"],
+  "friends": [{
+    "ra": "string",
+    "UID": "string"
+  }]
 }
