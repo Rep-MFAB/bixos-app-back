@@ -8,16 +8,18 @@ Back End usado para o site e o bot da discipuluz!
 * [http](https://golang.org/pkg/net/http/)
 
 ## BANCO DE DADOS
-[MySQL](https://www.mysql.com/) - [Go-driver](https://github.com/go-sql-driver/mysql) - [Go-lib](https://golang.org/pkg/database/sql/)
+[MongoDB](https://docs.mongodb.com/) - [Go-lib](https://labix.org/mgo)
 
 ---
 
 ## INSTALAÇÃO
- 1. Install Go
+ 1. Instale Go
     * Windows - [Link](https://golang.org/)
     * Ubuntu - `sudo apt-get install go`
     * Arch - `sudo pacman -S go`
     * Fedora - `sudo yum install go`
+ 2. Instale o driver do MongoDB
+    * `go get gopkg.in/mgo.v2`
      
 ---
 
