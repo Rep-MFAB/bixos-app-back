@@ -1,0 +1,6 @@
+{
+    "mongodb": {
+        "host": "db:27017",
+        "database": "bixos-app"
+    }
+}
