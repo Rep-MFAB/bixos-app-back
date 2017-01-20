@@ -6,14 +6,33 @@
     "password": "string",
     "UID": "string"
   },
-  "birth": "Date",
-  "phone": "string",
-  "grad": "string",
-  "drinks": "int",
-  "relationship": {
-    "sex": "string",
-    "gender": "string",
-    "status": "string"
+  "personal": {
+    "birth": "Date",
+    "phone": "string",
+    "drinks": "int",
+    "relationship": {
+      "sex": "string",
+      "gender": "string",
+      "status": "string"
+    },
+    "origin": {
+      "country": "string",
+      "state": "string",
+      "city": "string",
+      "school?": "string"
+    }
+  },
+  "school": {
+    "grad": "string",
+    "languages": ["string"],
+    "reason?": {
+      "unicamp?": "string",
+      "grad?": "string"
+    } 
+  },
+  "work?": {
+    "job?": "string",
+    "company?": "string"
   },
   "social?": {
     "facebook?": "string",
@@ -22,16 +41,6 @@
     "snapchat?": "string",
     "google": "string",
     "others": ["string"]
-  },
-  "reason?": {
-    "unicamp?": "string",
-    "grad?": "string"
-  }, 
-  "origin": {
-    "country": "string",
-    "state": "string",
-    "city": "string",
-    "school?": "string"
   },
   "hobbies": {
     "games?": {
@@ -52,6 +61,7 @@
     "sports?": {
       "plays?": ["string"],
       "likes?": ["string"],
+      "teams?": ["string"],
       "extra?": "string"
     },
     "tv?": {
@@ -59,6 +69,7 @@
       "movies?": ["string"],
       "series?": ["string"],
       "cartoons?": ["string"],
+      "disney:": ["string"],
       "animes?": ["string"],
       "accounts": {
         "imdb?": "string",
@@ -81,11 +92,6 @@
     },
     "others?": ["string"]
   },
-  "work?": {
-    "job?": "string",
-    "enterprise?": "string"
-  },
-  "languages": ["string"],
   "friends": [{
     "ra": "string",
     "UID": "string"
