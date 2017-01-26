@@ -2,17 +2,19 @@ package main
 
 import (
     _ "./endpoints"
+    "./config"
     "./utils/mongodb"
-    "log"
     "net/http"
+    "log"
+    "fmt"
 )
 
 func main(){
     session := mongodb.Start()
     defer session.Close()
 
-    err := http.ListenAndServe(":8080", nil)
+    err := http.ListenAndServe(fmt.Sprintf(":%d", config.Config.Server.Port), nil)
     if err != nil {
-        log.Fatal("Error while listenning to port 8080: ", err)
+        log.Fatal(fmt.Sprintf("Error while listenning to port %d:", config.Config.Server.Port), err)
     }
 }

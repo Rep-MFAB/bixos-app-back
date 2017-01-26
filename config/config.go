@@ -7,6 +7,9 @@ import (
 )
 
 type Configuration struct {
+    Server      struct {
+        Port        int
+    }
     Mongodb     struct {
         Host        string
         Database    string
