@@ -17,7 +17,7 @@ func Start() *mgo.Session{
     // Optional. Switch the session to a monotonic behavior.
     Session.SetMode(mgo.Primary, true)
 
-    log.Println("Mongodb started on host: " + config.Config.Mongodb.Host)
+    log.Printf("Mongodb started on host: \033[95m%s\033[0m", config.Config.Mongodb.Host)
 
     return Session
 }
