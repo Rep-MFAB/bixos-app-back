@@ -2,25 +2,36 @@ package endpoints
 
 import (
     "net/http"
-    "encoding/json"
-    "gopkg.in/mgo.v2/bson"
     "../utils/mongodb"
+    "../utils/json"
+    "fmt"
 )
 
 func init(){
     http.HandleFunc("/users/register", func(w http.ResponseWriter, r *http.Request) {
-        if r.Body == nil {
-            http.Error(w, "Please send a request body", 400)
+        var user = json.Get(w, r)
+        if user == nil {
             return
         }
 
-        var user bson.M
-        err := json.NewDecoder(r.Body).Decode(&user)
+        // Searching if user already exists
+        err, _ := mongodb.FindOne("Users", mongodb.M{"email": user["email"]})
+        
+        if err == nil{
+            http.Error(w, "User already exists", 409)
+            return
+        }else if err.Error() != "not found" {
+            http.Error(w, "Database Error", 500)
+            return
+        }
+
+        // Inserting user
+        err = mongodb.Insert("Users", user)
         if err != nil {
-            http.Error(w, err.Error(), 400)
+            http.Error(w, "Database Error", 500)
             return
         }
 
-        mongodb.Insert("Users", user)        
+        fmt.Fprint(w, "Success")
     })
 }
