@@ -15,13 +15,13 @@ func init(){
         }
 
         // Searching if user already exists
-        err, _ := mongodb.FindOne("Users", mongodb.M{"email": user["email"]})
+        err, dbUser := mongodb.FindOne("Users", mongodb.M{"email": user["email"]})
         
-        if err == nil{
-            http.Error(w, "User already exists", 409)
-            return
-        }else if err.Error() != "not found" {
+        if err != nil{
             http.Error(w, "Database Error", 500)
+            return
+        }else if dbUser != nil {
+            http.Error(w, "User already exists", 409)
             return
         }
 
