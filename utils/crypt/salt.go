@@ -9,7 +9,7 @@ import (
 	"io"
 )
 
-const saltSize = 32
+const saltSize = 16
 
 func generateSalt(secret []byte) ([]byte, error) {
 	buf := make([]byte, saltSize, saltSize+sha1.Size)
