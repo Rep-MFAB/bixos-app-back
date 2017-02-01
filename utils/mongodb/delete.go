@@ -1,11 +1,12 @@
 package mongodb
+
 import (
-    "time"
+	"time"
 )
 
-func Delete(document string, query M) (error){
-    err := Update(document, query, M{
-        "removedAt": time.Now(),
-    })
-    return err
+func Delete(document string, query M) error {
+	err := Update(document, query, M{
+		"removedAt": time.Now(),
+	})
+	return err
 }
