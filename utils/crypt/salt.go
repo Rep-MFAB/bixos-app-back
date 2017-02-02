@@ -9,10 +9,10 @@ import (
 	"io"
 )
 
-const saltSize = 16
+const SaltSize = 16
 
 func generateSalt(secret []byte) ([]byte, error) {
-	buf := make([]byte, saltSize, saltSize+sha1.Size)
+	buf := make([]byte, SaltSize, SaltSize+sha1.Size)
 	_, err := io.ReadFull(rand.Reader, buf)
 
 	if err != nil {
