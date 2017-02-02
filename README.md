@@ -1,5 +1,5 @@
 # BIXOS APP BACK
-Back End usado para o site e o bot da discipuluz!
+Back End usado para o aplicativo de integração dos bixos da Unicamp
 
 ## LINGUAGEM
 [Golang](https://golang.org/)
@@ -20,7 +20,7 @@ Back End usado para o site e o bot da discipuluz!
     * Fedora - `sudo yum install go`
  2. Instale o driver do MongoDB
     * `go get gopkg.in/mgo.v2`
-     
+
 ---
 
 ## Desenvolvimento
@@ -35,7 +35,7 @@ Back End usado para o site e o bot da discipuluz!
 
 * dev - Branch de desenvolvimento, versões prontas para irem para produção, beta
 
-* Outras branches - Criá-las para realizar alterações, alpha 
+* Outras branches - Criá-las para realizar alterações, alpha
 
 ---
 
