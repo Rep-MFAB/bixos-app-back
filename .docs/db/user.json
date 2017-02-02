@@ -1,9 +1,11 @@
 {
   "name": "string",
   "ra": "string",
+  "completed": "bool",
   "account": {
     "email": "string",
-    "password": "string",
+    "password": "byte",
+    "salt": "byte",
     "UID": "string"
   },
   "personal": {
@@ -22,13 +24,13 @@
       "school?": "string"
     }
   },
-  "school": {
+  "university": {
     "grad": "string",
     "languages": ["string"],
     "reason?": {
       "unicamp?": "string",
       "grad?": "string"
-    } 
+    }
   },
   "work?": {
     "job?": "string",
