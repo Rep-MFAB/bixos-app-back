@@ -104,7 +104,7 @@ type User struct {
 	Photo string        `json:"photo" bson:"photo"`
 	RA    string        `json:"ra" bson:"ra"`
 	UID   string        `json:"uid" bson:"uid"`
-	_id   bson.ObjectId `bson:"_id,omitempty"`
+	ID    bson.ObjectId `bson:"_id,omitempty"`
 
 	Account `json:"account" bson:"account"`
 
