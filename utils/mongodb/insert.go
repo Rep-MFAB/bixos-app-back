@@ -1,20 +1,22 @@
 package mongodb
 
 import (
+	"errors"
 	"log"
-	"time"
 
 	"github.com/seijihirao/bixos-app-back/config"
 )
 
-func Insert(document string, data M) error {
-	data["removedAt"] = false
-	data["updatedAt"] = time.Now()
+// Insert adds data to the mongodb
+func Insert(query Query) error {
+	if query.Find == nil || query.Document == "" || query.Data == nil {
+		return errors.New("Please provide a valid query.")
+	}
 
-	c := Session.DB(config.Config.Mongodb.Database).C(document)
-	err := c.Insert(data)
+	c := Session.DB(config.Config.Mongodb.Database).C(query.Document)
+	err := c.Insert(query.Data)
 	if err != nil {
-		log.Fatal("Error while inserting data on "+document, err)
+		log.Fatal("Error while inserting data on "+query.Document, err)
 	}
 	return err
 }

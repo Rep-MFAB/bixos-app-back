@@ -7,8 +7,10 @@ import (
 	"gopkg.in/mgo.v2"
 )
 
+// Session exports session to use in all mongodb operations
 var Session *mgo.Session
 
+// Start intializes a new mongodb connection and returns its session information.
 func Start() *mgo.Session {
 	var err error
 	Session, err = mgo.Dial(config.Config.Mongodb.Host)
