@@ -106,6 +106,9 @@ type User struct {
 	UID   string        `json:"uid" bson:"uid"`
 	ID    bson.ObjectId `bson:"_id,omitempty"`
 
+	RemovedAt time.Time `json:"-" bson:"removedAt"`
+	UpdatedAt time.Time `json:"updatedAt" bson:"updatedAt"`
+
 	Account `json:"account" bson:"account"`
 
 	Personal `json:"personal" bson:"personal"`
