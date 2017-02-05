@@ -3,7 +3,7 @@ package mongodb
 import (
 	"log"
 
-	"../../config"
+	"github.com/seijihirao/bixos-app-back/config"
 	"gopkg.in/mgo.v2"
 )
 

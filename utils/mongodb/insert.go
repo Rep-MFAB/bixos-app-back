@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"../../config"
+	"github.com/seijihirao/bixos-app-back/config"
 )
 
 func Insert(document string, data M) error {

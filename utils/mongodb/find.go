@@ -1,7 +1,7 @@
 package mongodb
 
 import (
-	"../../config"
+	"github.com/seijihirao/bixos-app-back/config"
 )
 
 func FindOne(document string, query M) (error, M) {

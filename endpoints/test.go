@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"../config"
+	"github.com/seijihirao/bixos-app-back/config"
 )
 
 func init() {

@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"../mongodb"
+	"github.com/seijihirao/bixos-app-back/utils/mongodb"
 )
 
+// Get returns a map[string]inteface{} object which corresponds to the json structure passed to it.
 func Get(w http.ResponseWriter, r *http.Request) mongodb.M {
-
 	if r.Body == nil {
 		http.Error(w, "Please send a request body", 400)
 		return nil

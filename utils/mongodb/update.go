@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"../../config"
+	"github.com/seijihirao/bixos-app-back/config"
 )
 
 func Update(document string, query M, data M) error {

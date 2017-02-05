@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"./config"
-	_ "./endpoints"
-	"./utils/mongodb"
+	"github.com/seijihirao/bixos-app-back/config"
+	_ "github.com/seijihirao/bixos-app-back/endpoints"
+	"github.com/seijihirao/bixos-app-back/utils/mongodb"
 )
 
 func main() {
