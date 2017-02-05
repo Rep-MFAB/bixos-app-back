@@ -1,8 +1,16 @@
 package mongodb
 
 import (
+	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
+
+func init() {
+	ErrNotFound = mgo.ErrNotFound
+}
+
+// ErrNotFound defines a not found error type
+var ErrNotFound error
 
 // M defines a generic type for mongodb queries.
 type M bson.M
@@ -30,6 +38,6 @@ type Query struct {
 }
 
 // NewQuery returns a new Query object with Find and document initialized
-func NewQuery(document string, find M) (Query, error) {
-	return Query{Document: document, Find: find}, nil
+func NewQuery(document string, find M) Query {
+	return Query{Document: document, Find: find}
 }
