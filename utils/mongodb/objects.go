@@ -31,10 +31,11 @@ type Query struct {
 	Results []interface{}
 
 	// Optional
-	Limit int
-	Skip  int
-	Sort  []string
-	Hint  []string
+	Limit      int
+	Skip       int
+	Sort       []string
+	Hint       []string
+	HardDelete bool
 }
 
 // NewQuery returns a new Query object with Find and document initialized

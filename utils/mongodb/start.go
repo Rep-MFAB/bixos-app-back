@@ -17,8 +17,9 @@ func Start() *mgo.Session {
 	if err != nil {
 		log.Fatal("Starting Mongo: ", err)
 	}
-	// Optional. Switch the session to a monotonic behavior.
+
 	Session.SetMode(mgo.Primary, true)
+	Session.SetSafe(&mgo.Safe{})
 
 	log.Printf("Mongodb started on host: \033[95m%s\033[0m", config.Config.Mongodb.Host)
 

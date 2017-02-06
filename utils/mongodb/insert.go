@@ -10,7 +10,7 @@ import (
 // Insert adds data to the mongodb
 func Insert(query Query) error {
 	if query.Document == "" || query.Data == nil {
-		return errors.New("Please provide a valid query.")
+		return errors.New("Please provide a valid query")
 	}
 
 	c := Session.DB(config.Config.Mongodb.Database).C(query.Document)

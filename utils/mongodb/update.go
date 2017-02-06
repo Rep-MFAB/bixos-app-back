@@ -10,7 +10,7 @@ import (
 // Update updates the fields of the indicated document.
 func Update(query Query) error {
 	if query.Find == nil || query.Document == "" || query.Data == nil {
-		return errors.New("Please provide a valid query.")
+		return errors.New("please provide a valid query")
 	}
 
 	c := Session.DB(config.Config.Mongodb.Database).C(query.Document)

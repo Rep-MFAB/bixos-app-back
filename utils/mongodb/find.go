@@ -9,7 +9,7 @@ import (
 // FindOne searches for a single entry as indicated by query.Find in mongodb filling the query.Output field with what is found
 func FindOne(query Query) error {
 	if query.Find == nil || query.Document == "" || query.Result == nil {
-		return errors.New("Please provide a valid query.")
+		return errors.New("please provide a valid query")
 	}
 
 	c := Session.DB(config.Config.Mongodb.Database).C(query.Document)
@@ -29,7 +29,7 @@ func FindOne(query Query) error {
 // FindAll searches for  all the entries
 func FindAll(query Query) error {
 	if query.Find == nil || query.Document == "" || query.Results == nil {
-		return errors.New("Please provide a valid query.")
+		return errors.New("please provide a valid query")
 	}
 
 	c := Session.DB(config.Config.Mongodb.Database).C(query.Document)
